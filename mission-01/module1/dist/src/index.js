@@ -1,3 +1,3 @@
 "use strict";
-let course = 'level - 02';
+const course = 'level 2 batch 4';
 console.log(course);
