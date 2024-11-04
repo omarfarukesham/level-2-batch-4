@@ -74,4 +74,55 @@
 
     console.log(permissionObj.email)
 
+    //function type alias 
+
+    // Define a reusable function type
+type MathOperation = (a: number, b: number) => number;
+
+// Use the function type alias
+const multiply: MathOperation = (x, y) => x * y;
+const subtract: MathOperation = (x, y) => x - y;
+
+
+console.log(subtract(10, 10))
+
+
+// spread, rest operator, destructuring
+
+//spread operator means one array or object, can spread with another new array or object
+
+let flower:string[] = ['rose', 'belli']
+
+let newFlower = [...flower, 'kakimni']
+
+console.log(newFlower[2])
+
+// rest operator -> when it is needed to pass multiple argument with a function, rest operator help us to pass multiple arugment 
+//with a single one which is rest operator simillar pattern followed by spread operator like three dots
+
+function sum(...numbers: number[]): number {
+    return numbers.reduce((acc, curr) => acc + curr, 0);
+  }
+  
+  console.log(sum(1, 2, 3)); // Output: 6
+  console.log(sum(4, 5, 6, 7, 8)); // Output: 30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
