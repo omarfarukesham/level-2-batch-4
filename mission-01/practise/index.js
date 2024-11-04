@@ -1,3 +1,4 @@
+"use strict";
 /*
 Task 1: Basic Data Types and First Program
 Objective: Write a TypeScript program that outputs a welcome message.
@@ -8,9 +9,6 @@ Create a TypeScript program.
 Print the following message to the console:
 Hello World, I will complete this course successfully and become a Next level Web Developer!
 **/
-
 // string, number, boolean, null, undefined, bigIn, ---- array, tuple, object, function
-
-const message: string = "Hello World, I will complete this course successfully and become a Next level Web Developer!"
-
-console.log(message)
+const message = "Hello World, I will complete this course successfully and become a Next level Web Developer!";
+console.log(message);
