@@ -111,8 +111,28 @@ function sum(...numbers: number[]): number {
 
 
 
+// intersection and optional chaining
+type People = {
+    name?: string,
+    city: string,
+    age?: number
+}
+type ProfileCred = {
+    email: string;
+    role?: number | string;
+}
+
+type UserAllInfo = People & ProfileCred;
 
 
+
+const personEmployee: UserAllInfo = {
+    name: "Alice",
+    city: 'Dhaka',
+    age: 30,
+    role: "Developer",
+    email: 'omar@gmail.com'
+  };
 
 
 
