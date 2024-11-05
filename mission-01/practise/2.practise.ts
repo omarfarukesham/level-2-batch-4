@@ -143,6 +143,29 @@ console.log(msg)
 
 
 
+// unknow type 
+
+let userInput1: unknown;
+
+userInput1 = "Hello";    // OK
+userInput1 = 42;         // OK
+userInput1 = true;       // OK
+
+// But to use it, you need to check the type first
+if (typeof userInput1 === "string") {
+  console.log(userInput1.toUpperCase()); // Safe to use as a string
+} else {
+  console.log("Not a string"); 
+}  
+
+
+//never return anything 
+
+let throwErrorMessage = (message:string):never =>{
+    throw new Error(message)
+}
+
+
 
 
 
