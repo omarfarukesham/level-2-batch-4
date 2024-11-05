@@ -111,14 +111,67 @@ function sum(...numbers: number[]): number {
 
 
 
+// intersection and optional chaining
+type People = {
+    name?: string,
+    city: string,
+    age?: number
+}
+type ProfileCred = {
+    email: string;
+    role?: number | string;
+}
+
+type UserAllInfo = People & ProfileCred;
 
 
 
+const personEmployee: UserAllInfo = {
+    name: "Alice",
+    city: 'Dhaka',
+    age: 30,
+    role: "Developer",
+    email: 'omar@gmail.com'
+  };
 
 
 
+const userInput = 0;
+const msg = userInput ?? 'No, user find'
+
+console.log(msg)
 
 
+
+// unknow type 
+
+let userInput1: unknown;
+
+userInput1 = "Hello";    // OK
+userInput1 = 42;         // OK
+userInput1 = true;       // OK
+
+// But to use it, you need to check the type first
+if (typeof userInput1 === "string") {
+  console.log(userInput1.toUpperCase()); // Safe to use as a string
+} else {
+  console.log("Not a string"); 
+}  
+
+
+//never return anything 
+
+let throwErrorMessage = (message:string):never =>{
+    throw new Error(message)
+}
+
+//check generic type
+function checkGeneric<T>(value:T):T{
+        return value;
+}
+
+console.log(checkGeneric('hello generic function'))
+console.log(checkGeneric(45))
 
 
 
