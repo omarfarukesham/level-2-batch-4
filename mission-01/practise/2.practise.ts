@@ -136,7 +136,10 @@ const personEmployee: UserAllInfo = {
 
 
 
+const userInput = 0;
+const msg = userInput ?? 'No, user find'
 
+console.log(msg)
 
 
 
