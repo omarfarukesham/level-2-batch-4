@@ -165,6 +165,13 @@ let throwErrorMessage = (message:string):never =>{
     throw new Error(message)
 }
 
+//check generic type
+function checkGeneric<T>(value:T):T{
+        return value;
+}
+
+console.log(checkGeneric('hello generic function'))
+console.log(checkGeneric(45))
 
 
 
