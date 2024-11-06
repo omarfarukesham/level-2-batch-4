@@ -2,20 +2,20 @@
     class BankAccount {
       public readonly id: number;
         public name: string;
-        private balance: number;
+        private _balance: number;
     
         constructor(id:number, name: string, balance: number){
             this.id =  id;
             this.name =  name;
-            this.balance = balance
+            this._balance = balance
         }
 
         addDeposit(amount: number){
-            this.balance = this.balance + amount;
+            this._balance = this._balance + amount;
         }
 
         getBalance(){
-            return this.balance;
+            return this._balance;
         }
     }
 
@@ -27,6 +27,13 @@
     poorPeople.addDeposit(50)
 
     console.log(poorPeople.getBalance())
+
+    class StudentAccount extends BankAccount{
+        test(){
+            this.name;
+            this.id;
+        }
+    }
 
 
 
